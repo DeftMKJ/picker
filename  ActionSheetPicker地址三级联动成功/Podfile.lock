@@ -1,0 +1,13 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.0.5)
+  - MJExtension (3.0.10)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - MJExtension
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+
+COCOAPODS: 0.39.0
