@@ -66,6 +66,20 @@
     // 点击的时候传三个index进去
     self.picker = [[ActionSheetCustomPicker alloc]initWithTitle:@"选择地区" delegate:self showCancelButton:YES origin:self.view initialSelections:@[@(self.index1),@(self.index2),@(self.index3)]];
     self.picker.tapDismissAction  = TapActionSuccess;
+    // 可以自定义左边和右边的按钮
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    button.frame = CGRectMake(0, 0, 44, 44);
+    [button setTitle:@"我擦" forState:UIControlStateNormal];
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    button1.frame = CGRectMake(0, 0, 44, 44);
+    [button1 setTitle:@"呵呵" forState:UIControlStateNormal];
+    [self.picker setCancelButton:[[UIBarButtonItem alloc] initWithCustomView:button]];
+    [self.picker setDoneButton:[[UIBarButtonItem alloc] initWithCustomView:button1]];
+    
+    [self.picker addCustomButtonWithTitle:@"再来一次" value:@(1)];
     [self.picker showActionSheetPicker];
 }
 
